@@ -1,4 +1,44 @@
 @import '_vars';
+#header{
+    background-color: #004a80;
+}
 #home{
-    background-image: url(:/images/bg.jpeg);
+    background-image: url("/images/bg.png");
+    //background-color: orange;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+.homebg{
+    margin-left: 20px;
+}
+#home div{
+    text-align: center;
+}
+#about{
+    background-color: #004a80;
+    color: white;
+}
+.info{
+    text-align: center;
+}
+#skills{
+    background-color: #ddd6d0;
+}
+.dev{
+    padding-left: 40px;   
+}
+.dev p{
+    text-transform: uppercase;
+    color: #ff8400;
+}
+.des{
+    padding-left: 40px;   
+}
+.des p{
+    text-transform: uppercase;
+    color: #f20940;
+}
+#work{
+    background-color: #004a80;
+    color: white;
 }
