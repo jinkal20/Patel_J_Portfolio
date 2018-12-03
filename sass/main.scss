@@ -1,14 +1,14 @@
 @import '_vars';
 
 
-#header{
+.header{
     background-color: #004a80;
+    
 }
-#home{
-    background-image: url("/images/bg.png");
-    //background-color: orange;
+#home div{
     text-decoration: underline;
     text-decoration-color: white;
+    background-color: #ddd6d0;
 }
 .homebg{
     margin-left: 20px;
@@ -45,7 +45,13 @@
     color: white;
 }
 @media screen and (min-width: 601px) {
-    div.example {
-      font-size: 80px;
+    div {
+      font-size: 50px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    div {
+      font-size: 30px;
     }
   }
