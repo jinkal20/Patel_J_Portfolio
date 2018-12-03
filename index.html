@@ -10,32 +10,40 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <section class="row" id="header">
+        <div id="navbar" class="header">
+                <a href="#default" id="logo" class="small-3 large-3 columns"><img src="images/jp.svg"></a>
+                <div id="navbar-right">
+                  <a class="active" href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#skills">Skills</a>
+                  <a href="#work">Work</a>
+                  <a href="contact.php">Contact</a> 
+                </div>
+        </div>
+        <main id="app">
+   <!-- <section class="row" id="header">
         <div class="small-3 columns">
             <img src="images/jp.svg">
         </div>
-    </section>
+    </section>-->
     <section id="home" class="row">
-            <div>Hello I'm</div>
-            <div>JINKAL PATEL</div>
+            <div class="small-12 large-12 columns">Hello I'm</div>
+            <div class="small-12 large-12 columns">JINKAL PATEL</div>
     </section>  
     <section id="about">
         <div class="row">
         <div class="small-2 columns"><img src="images/about.png"></div>
-        <div class="small-10 text-centered columns">About</div>
+        <div class="small-10 text-centered large-10 columns ">About</div>
         </div>
         <div class="row">
-        <div class="small-3 small-centered columns homebg" ><img src="images/home_bg.png"></div>
-        <div class="small-12 columns info">I am a graphic designer and i also love to to do 
-                Front-end developing. I am perceving in Interactive Media Design
-                 Course in Fanshawe. My hobby is to play 
-                Cricket and volleball.</div>
-            </div>
+        <div class="small-3 small-centered columns homebg" v-for="about in videodata"><img :src="'images/'+ about.image" alt=""></div>
+        <div class="small-12 columns info" v-for="about in videodata">{{ about.description }}</div>
+        </div>
     </section> 
     <section id="skills">
             <div class="row">
-                    <div class="small-2 columns"><img src="images/skills.png"></div>
-                    <div class="small-10 text-centered columns">Skills</div>
+                    <div class="small-2 large-2 columns"><img src="images/skills.png"></div>
+                    <div class="small-10 text-centered large-10 columns">Skills</div>
             </div>
             <div class="row dev">
                 <div class="small-3 columns">
@@ -66,7 +74,7 @@
             </div>
         </br>
             <div class="row">
-            <div class="small-12 large-12 columns"><img src="images/agencyX_mobile.png"></div>
+            <div class="small-12 large-12 columns" v-for="work in videodata"><img :src="'images/'+ work.work_image" alt=""></div>
             </div>
         </br>
             <div class="row">
@@ -82,5 +90,7 @@
             </div>
 
     </section>
+    </main>
+    <script src="js/main.js"></script>
 </body>
 </html>
