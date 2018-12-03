@@ -11,7 +11,7 @@
 </head>
 <body>
         <div id="navbar" class="header">
-                <a href="#default" id="logo" class="small-3 large-3 columns"><img src="images/jp.svg"></a>
+                <a href="#default" id="logo" class="small-3 large-1 columns"><img src="images/jp.svg"></a>
                 <ul class="menu expanded vertical medium-horizontal">
                     <li><a class="active" href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -41,7 +41,7 @@
                     <div class="small-10 text-centered large-10 columns">Skills</div>
             </div>
             <div class="row dev">
-                <div class="small-3 columns">
+                <div class="small-1 large-12 columns">
                 <p>devlopment</p>
                 <ul>
                     <li v-for="skills in Development">{{skills}}</li>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="row des">
-                    <div class="small-3 columns">    
+                    <div class="small-1  large-12 columns">    
                     <p>desiging</p>
                     <ul>
                         <li v-for="skills in Desiging">{{skills}}</li>
@@ -62,14 +62,20 @@
                     <div class="small-2 columns"><img src="images/work.png"></div>
                     <div class="small-10 text-centered columns">Work</div>
             </div>
-        </br>
             <div class="row">
             <div class="small-12 large-6 columns" v-for="work in workdata">  
             <img :src="'images/'+ work.work_image" alt="">
         </div>
             </div>
-        </br>
     </section>
+    <div id="navbar" class="footer">
+            <ul class="">
+                    <li><a href="https://github.com/jinkal20"><img src="images/fb.png"></a></li>
+                    <li><a href="https://github.com/jinkal20"><img src="images/insta.png"></a></li>
+                <li><a href="https://github.com/jinkal20"><img src="images/github.png"></a></li>   
+            </ul>
+    </div>
+
     </main>
     <script src="js/main.js"></script>
 </body>
