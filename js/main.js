@@ -7,7 +7,11 @@
             videodata: [],
             singlemoviedata: [],
             kidsdescription :"",
-            showDetails : false
+            showDetails : false,
+            workdata:[],
+            Development: ["HTML","CSS","Javascript"],
+            Desiging : ["Photopshop","Illustrator","InDesign","AfterEffects"]
+            
         },
         created : function(){
             this.fetchData(null);
@@ -18,12 +22,16 @@
                 fetch(url)
                 .then(res => res.json())
                 .then(data => {
+                    
                     if (movie){
-                        console.log(data);
+                        console.log("drf");
+                        //console.log(data);
                         this.singlemoviedata =data;
                     } else {
-                        console.log(data);
-                        this.videodata =data;
+                        console.log("drf");
+                       // console.log(data[0]);
+                        this.videodata =data[0];
+                        this.workdata = data[1];
                     }
                 })
             }

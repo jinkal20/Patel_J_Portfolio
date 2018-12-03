@@ -12,27 +12,22 @@
 <body>
         <div id="navbar" class="header">
                 <a href="#default" id="logo" class="small-3 large-3 columns"><img src="images/jp.svg"></a>
-                <div id="navbar-right">
-                  <a class="active" href="#home">Home</a>
-                  <a href="#about">About</a>
-                  <a href="#skills">Skills</a>
-                  <a href="#work">Work</a>
-                  <a href="contact.php">Contact</a> 
-                </div>
+                <ul class="menu expanded vertical medium-horizontal">
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
         </div>
         <main id="app">
-   <!-- <section class="row" id="header">
-        <div class="small-3 columns">
-            <img src="images/jp.svg">
-        </div>
-    </section>-->
     <section id="home" class="row">
             <div class="small-12 large-12 columns">Hello I'm</div>
             <div class="small-12 large-12 columns">JINKAL PATEL</div>
     </section>  
     <section id="about">
         <div class="row">
-        <div class="small-2 columns"><img src="images/about.png"></div>
+        <div class="small-2 large-2 columns"><img src="images/about.png"></div>
         <div class="small-10 text-centered large-10 columns ">About</div>
         </div>
         <div class="row">
@@ -49,9 +44,7 @@
                 <div class="small-3 columns">
                 <p>devlopment</p>
                 <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
+                    <li v-for="skills in Development">{{skills}}</li>
                 </ul>
                 </div>
             </div>
@@ -59,10 +52,7 @@
                     <div class="small-3 columns">    
                     <p>desiging</p>
                     <ul>
-                        <li>Photopshop</li>
-                        <li>Illustrator</li>
-                        <li>InDesign</li>
-                        <li>AfterEffects</li>
+                        <li v-for="skills in Desiging">{{skills}}</li>
                     </ul>
                     </div>
             </div>
@@ -74,21 +64,11 @@
             </div>
         </br>
             <div class="row">
-            <div class="small-12 large-12 columns" v-for="work in videodata"><img :src="'images/'+ work.work_image" alt=""></div>
+            <div class="small-12 large-6 columns" v-for="work in workdata">  
+            <img :src="'images/'+ work.work_image" alt="">
+        </div>
             </div>
         </br>
-            <div class="row">
-                <div class="small-12 large-12 columns"><img src="images/image_2.png"></div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="small-12 large-6 columns"><img src="images/image_3.png"></div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="small-12 large-6 columns"><img src="images/Patel_Jinkal_IID.png"></div>
-            </div>
-
     </section>
     </main>
     <script src="js/main.js"></script>
