@@ -3,13 +3,19 @@
 
 .header{
     background-color: #004a80;
+    position: -webkit-sticky;
+    position: sticky;
     
 }
+a:hover{
+    background-color: #ddd6d0;
+}
 #home{
-    padding-top: 150px;
+    padding-top: 100px;
     height: 400px;
     background-image: url(../images/bg.png);
     background-repeat: no-repeat;
+    background-color: #ddd6d0;
 }
 #home div{
     text-decoration: underline;
@@ -56,7 +62,7 @@
 
   @media screen and (max-width: 600px) {
     div {
-      font-size: 30px;
+      font-size: 25px;
     }
   }
 #contact{

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 30, 2018 at 08:36 PM
+-- Generation Time: Dec 04, 2018 at 07:15 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -47,6 +47,27 @@ INSERT INTO `tbl_about` (`about_id`, `name`, `description`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_home`
+--
+
+DROP TABLE IF EXISTS `tbl_home`;
+CREATE TABLE IF NOT EXISTS `tbl_home` (
+  `home_id` int(3) NOT NULL AUTO_INCREMENT,
+  `description` varchar(150) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  PRIMARY KEY (`home_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_home`
+--
+
+INSERT INTO `tbl_home` (`home_id`, `description`, `name`) VALUES
+(1, '“Whitespace is like air: it is necessary for design to breathe.”', 'JINKAL PATEL');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_work`
 --
 
@@ -55,14 +76,17 @@ CREATE TABLE IF NOT EXISTS `tbl_work` (
   `work_id` int(5) NOT NULL AUTO_INCREMENT,
   `work_image` varchar(20) NOT NULL,
   PRIMARY KEY (`work_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_work`
 --
 
 INSERT INTO `tbl_work` (`work_id`, `work_image`) VALUES
-(1, 'agencyX_mobile.png');
+(1, 'agencyX_mobile.png'),
+(2, 'Patel_Jinkal_IID.png'),
+(3, 'soccer.png'),
+(4, 'soccer.png');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

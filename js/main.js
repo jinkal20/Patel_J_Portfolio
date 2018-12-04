@@ -6,9 +6,9 @@
             mainmessage : "",
             videodata: [],
             singlemoviedata: [],
-            kidsdescription :"",
             showDetails : false,
             workdata:[],
+            Name: ["Hello I'm","JINKAL PATEL","“Whitespace is like air: it is necessary for design to breathe.”"],
             Development: ["HTML","CSS","Javascript"],
             Desiging : ["Photopshop","Illustrator","InDesign","AfterEffects"]
             

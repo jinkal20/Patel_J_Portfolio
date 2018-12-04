@@ -30,4 +30,5 @@ function get_work($pdo) {
 
     return $results;
 }
+
 ?>
