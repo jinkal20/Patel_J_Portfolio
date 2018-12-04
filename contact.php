@@ -20,12 +20,17 @@
 ?>
 <html>
 <head>
-	<meta charset="utf-8">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/foundation.css">
 	<title>Contact Us</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
-<body id="contact">
+<body>
 	<?php
 	if(isset($_GET['status']) && $_GET['status'] === 'succesfull'):?>
 	<div class="alert alert-succes" role="alert">
@@ -40,12 +45,12 @@
 	</div>
 	<?php endif;?>
 
-	<form action="sendemail.php" method="POST">
+	<form action="sendemail.php" method="POST" id="contact">
 		<?php  foreach ($fields as $field_name => $field_config):?>
 		<label for="<?php echo $field_name;?>"><?php echo $field_config['label'];?></label>
 		<input id="<?php echo $field_name;?>" type="<?php echo $field_config['type'];?>" name="<?php echo $field_name;?>">
 	<?php endforeach;?>
-	<button type="submit">Submit</button>
+	<button type="submit" id="btn">Submit</button>
 	</form>
 </body>
 </html>
