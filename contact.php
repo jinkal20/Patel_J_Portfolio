@@ -43,14 +43,18 @@
 	<div class="alert alert-error" role="error">
 	<p>The form is not submitted require fields</p>
 	</div>
-	<?php endif;?>
-
-	<form action="sendemail.php" method="POST" id="contact">
+	<?php endif;?>	
+	<div class="container">
+	<form action="sendemail.php" method="POST">
 		<?php  foreach ($fields as $field_name => $field_config):?>
-		<label for="<?php echo $field_name;?>"><?php echo $field_config['label'];?></label>
-		<input id="<?php echo $field_name;?>" type="<?php echo $field_config['type'];?>" name="<?php echo $field_name;?>">
+		<label  id="text" for="<?php echo $field_name;?>"><?php echo $field_config['label'];?></label>
+		<input class="field" id="<?php echo $field_name;?>" type="<?php echo $field_config['type'];?>" name="<?php echo $field_name;?>">
 	<?php endforeach;?>
+	<br>
+	<li><a class="active" href="index.html">Home</a></li>
 	<button type="submit" id="btn">Submit</button>
 	</form>
+	</div>
+	
 </body>
 </html>

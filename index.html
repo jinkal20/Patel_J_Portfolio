@@ -24,6 +24,7 @@
     <section id="home">
         <div class="row">
             <div class="small-12 large-12 columns" v-for="home in Name">{{ home }}</div>
+            <p v-for="tag in quote">{{ tag }}</p>
         </div>
     </section>  
     <section id="about">
@@ -66,7 +67,7 @@
             <div class="row">
             <div class="small-12 large-6 columns" v-for="work in workdata">  
             <img :src="'images/'+ work.work_image" alt="">
-        </div>
+            </div>
             </div>
     </section>
     <footer>
