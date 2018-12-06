@@ -10,7 +10,16 @@
     <title>Portfolio</title>
 </head>
 <body>
-        <div id="navbar" class="header">
+        <label for="show-menu" class="show-menu">Menu</label>
+        <input type="checkbox" id="show-menu" role="button">
+            <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+        <!--<div id="navbar" class="header">
                 <a href="#default" id="logo" class="small-3 large-1 columns"><img src="images/jp.svg"></a>
                 <ul class="menu expanded vertical medium-horizontal">
                     <li><a class="active" href="#home">Home</a></li>
@@ -19,7 +28,7 @@
                     <li><a href="#work">Work</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
-        </div>
+        </div>-->
         <main id="app">
     <section id="home">
         <div class="row">
@@ -60,15 +69,32 @@
             </div>
     </section>
     <section id="work">
+            
             <div class="row">
                     <div class="small-2 columns"><img src="images/work.png"></div>
                     <div class="small-10 text-centered columns">Work</div>
             </div>
-            <div class="row">
+            <button id="clickme"><div class="row">
+                    <div class="small-12 large-6 columns" v-for="work in workdata">  
+                    <img :src="'images/'+ work.work_image" alt="">
+                    </div>
+                    </div></button>
+
+	<div id="lightbox">
+		<div id="lightbox_content">
+			<div id="close">&times;</div>
+			<div><div class="row">
+                    <div class="small-12 large-6 columns" v-for="work in workdata">  
+                    <img :src="'images/'+ work.work_image" alt="">
+                    </div>
+                    </div></div>
+		</div>
+	</div>
+            <!--<div class="row">
             <div class="small-12 large-6 columns" v-for="work in workdata">  
             <img :src="'images/'+ work.work_image" alt="">
             </div>
-            </div>
+            </div>-->
     </section>
     <footer>
         <ul class="menu columns small-10 large-10 small-centered large-centered">
@@ -90,5 +116,6 @@
 
     </main>
     <script src="js/main.js"></script>
+    <script src="js/lightbox.js"></script>
 </body>
 </html>
