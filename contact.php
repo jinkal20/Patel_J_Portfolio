@@ -30,7 +30,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
-<body>
+<body id="contact">
 	<?php
 	if(isset($_GET['status']) && $_GET['status'] === 'succesfull'):?>
 	<div class="alert alert-succes" role="alert">
@@ -45,16 +45,20 @@
 	</div>
 	<?php endif;?>	
 	<div class="container">
+	<div class="row">
+        <div class="small-2 large-2 columns"><img src="images/about.png"></div>
+        <div class="small- text-centered large-2 columns ">Contact</div>
+        </div>
 	<form action="sendemail.php" method="POST">
 		<?php  foreach ($fields as $field_name => $field_config):?>
 		<label  id="text" for="<?php echo $field_name;?>"><?php echo $field_config['label'];?></label>
 		<input class="field" id="<?php echo $field_name;?>" type="<?php echo $field_config['type'];?>" name="<?php echo $field_name;?>">
 	<?php endforeach;?>
 	<br>
-	<li><a class="active" href="index.html">Home</a></li>
+	<button onclick="closeWin()">Home</button>
 	<button type="submit" id="btn">Submit</button>
 	</form>
 	</div>
-	
+	<script src="js/close.js"></script>
 </body>
 </html>
