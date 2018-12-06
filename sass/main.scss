@@ -1,7 +1,13 @@
 @import '_vars';
 
-body{
-  
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/tw-cen-mt-std/TwCenMTStd-SemiMedium.otf);
+}
+@font-face{
+    font-family: title;
+    src: url(../font/copperplate/OPTICopperplate-Heavy.otf);
 }
 .header{
     background-color: #004a80;
@@ -23,7 +29,7 @@ a:hover{
     background-color: #ddd6d0;
     background-size: cover;
     background-position: center;
-   
+    font-family: myFirstFont;
     background-repeat: no-repeat;
     background-color: #ddd6d0;
 }
@@ -31,6 +37,7 @@ a:hover{
     text-decoration: underline;
     text-decoration-color: white;
     color: black;
+    font-family: title;
 }
 
 #home div{
@@ -41,6 +48,7 @@ a:hover{
 #about{
     background-color: #004a80;
     color: white;
+    font-family: myFirstFont;
 }
 .info{
     text-align: center;
@@ -49,6 +57,7 @@ a:hover{
 // css for skills page
 #skills{
     background-color: #ddd6d0;
+    font-family: myFirstFont;
 }
 .dev{
     padding-left: 40px;   
