@@ -25,11 +25,11 @@
                 .then(data => {
                     
                     if (movie){
-                        console.log("drf");
+                        //console.log("drf");
                         //console.log(data);
                         this.singlemoviedata =data;
                     } else {
-                        console.log("drf");
+                        //console.log("drf");
                        // console.log(data[0]);
                         this.videodata =data[0];
                         this.workdata = data[1];
