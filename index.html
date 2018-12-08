@@ -11,37 +11,43 @@
 </head>
 <body>
 
-        <!--<div id="navbar" class="header">
-                <a href="#default" id="logo" class="small-3 large-1 columns"><img src="images/jp.svg"></a>
-                <ul class="menu expanded vertical medium-horizontal">
-                    <li><a class="active" href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                </ul>
-        </div>-->
         <main id="app">
-              <!--Navigation-->
-        <div class="topnav" id="myTopnav">
-            <a href="#home" class="active">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
-          </div>
+            <section id="hd">
+                
+                <nav role="navigation">
+                        <div id="menuToggle">
+                          <input type="checkbox" />
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          
+                          <!--
+                          Too bad the menu has to be inside of the button
+                          but hey, it's pure CSS magic.
+                          -->
+                          <ul id="menu">
+                            <a href="#home"><li>Home</li></a>
+                            <a href="#about"><li>About</li></a>
+                            <a href="#skills"><li>Interest</li></a>
+                            <a href="#work"><li>Work</li></a>
+                            <a href="contact.php"><li>Contact</li></a>
+                          </ul>
+                        </div>
+                      </nav>
+                    </section>
     <!--Home page-->
     <section id="home">
         <div class="row">
             <div id="under" class="small-12 large-12 columns" v-for="home in Name">{{ home }}</div>
             <p v-for="tag in quote">{{ tag }}</p>
+            <button type="button" id="vbtn">FEEL</button>
         </div>
+
     </section>  
     <!--About section
     -->
     <section id="about">
+        
         <div class="row">
         <div class="small-2 large-2 columns"><img src="images/about.png"></div>
         <div class="small-10 text-centered large-10 columns ">About</div>
@@ -53,12 +59,14 @@
     </section>
     <!--Skills Section--> 
     <section id="skills">
+            <div id="text"></div>
             <div class="row">
                     <div class="small-2 medium-2 large-2 columns"><img src="images/skills.png"></div>
-                    <div class="small-10 text-centered large-10 columns">Skills</div>
+                    <div class="small-10 text-centered large-10 columns">Interest</div>
             </div>
+            <div class="row large-12"></div>
             <div class="row dev">
-                <div class="small-1 medium-1 columns">
+                <div class="small-1 large-6 columns">
                 <p>devlopment</p>
                 <ul>
                     <li v-for="skills in Development">{{skills}}</li>
@@ -66,13 +74,14 @@
                 </div>
             </div>
             <div class="row des">
-                    <div class="small-1  large-12 columns">    
+                    <div class="small-1  large-6 columns">    
                     <p>desiging</p>
                     <ul>
                         <li v-for="skills in Desiging">{{skills}}</li>
                     </ul>
                     </div>
             </div>
+        </div>
     </section>
     <!--Work section-->
     <section id="work">
@@ -116,6 +125,6 @@
     </main>
     <script src="js/main.js"></script>
     <script src="js/lightbox.js"></script>
-    <script src="js/menu.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 </html>

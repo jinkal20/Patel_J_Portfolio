@@ -55,7 +55,7 @@
 		<input class="field" id="<?php echo $field_name;?>" type="<?php echo $field_config['type'];?>" name="<?php echo $field_name;?>">
 	<?php endforeach;?>
 	<br>
-	<button onclick="closeWin()">Home</button>
+	<!--<button onclick="closeWin()">Home</button>-->
 	<button type="submit" id="btn">Submit</button>
 	</form>
 	</div>
