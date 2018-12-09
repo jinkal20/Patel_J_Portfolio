@@ -46,7 +46,8 @@
 }
 
 #letter{
-    text-align: center
+    text-align: center;
+    color:#ff8400;
 }
 
 #vbtn{
@@ -114,7 +115,7 @@
     }
   }
 
-// changing video size as per window size
+/*// changing video size as per window size
 @media screen and (min-width: 601px) {
     .vs{
         width: 990px;
@@ -126,7 +127,7 @@
     .vs{
         width: 380px;
     }
-  }
+  }*/
 
 // css for contact page
 
