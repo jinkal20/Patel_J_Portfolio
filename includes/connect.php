@@ -1,6 +1,6 @@
 <?php
     $user = "root";
-    $pw = "root";
+    $pw = "";
 
     try {
         $conn = new PDO('mysql:host=localhost;dbname=portfolio', $user, $pw);
