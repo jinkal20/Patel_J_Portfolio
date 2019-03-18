@@ -10,8 +10,8 @@
             workdata:[],
             Name: ["Hello I'm","JINKAL PATEL"],
             quote: ["“Whitespace is like air: it is necessary for design to breathe.”"],
-            Development: ["HTML","CSS","Javascript"],
-            Desiging : ["Photopshop","Illustrator","InDesign","AfterEffects"]
+            Development: ["HTML","CSS","Javascript","PHP","MySQL","Vue","NodeJS"],
+            Desiging : ["Photopshop","Illustrator","InDesign","AfterEffects","Cinema4D"]
             
         },
         created : function(){

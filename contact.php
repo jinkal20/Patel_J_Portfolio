@@ -46,7 +46,7 @@
 	<?php endif;?>	
 	<div class="container">
 	<div class="row">
-        <div class="small-2 large-2 columns"><img src="images/about.png"></div>
+        
         <div class="small- text-centered large-2 columns ">Contact</div>
         </div>
 	<form action="sendemail.php" method="POST">

@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/foundation.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <title>Portfolio</title>
 </head>
@@ -36,7 +40,7 @@
                       </nav>
                     </section>
     <!--Home page-->
-    <section id="home" class="row">
+    <section id="home" class="row parallax">
         <div class="row">
             <div id="under" class="small-12 large-12 columns" v-for="home in Name">{{ home }}</div>
             <!--<p v-for="tag in quote">{{ tag }}</p>-->
@@ -45,51 +49,85 @@
         </div>
 
     </section>  
+    <section id="section01" class="demo">
+  
+        <a href="#section02"><span>
+      </section>
+      <section id="section02" class="demo">
+        
+        <a href="#section03"><span>
+      </section>
     <!--About section
     -->
     <section id="about" class="row">
         
         <div class="row">
-        <div class="small-2 large-2 columns"><img src="images/about.png"></div>
-        <div class="small-10 text-centered large-10 columns ">About</div>
+        <div class="small-12 text-centered large-12 large-offset-1 columns ">About</div>
         </div>
         <div class="row">
-        <div class="small-3 small-centered columns homebg" v-for="about in videodata"><img :src="'images/'+ about.image" alt=""></div>
+        <div class="small-3 small-centered large-2 large-centered large-offset-6 columns homebg" v-for="about in videodata"><img :src="'images/'+ about.image" alt=""></div>
         <div class="small-12 columns info" v-for="about in videodata">{{ about.description }}</div>
         </div>
+        
     </section>
     <!--Skills Section--> 
     
     <section id="skills" class="row">
-            <div class="row">
-                    <div class="small-2 columns"><img src="images/skills.png"></div>
-                    <div class="small-10 text-centered columns">Interest</div>
+        <div class="row">
+            <div class="small-12 text-centered large-12 large-offset-1 columns ">Interest</div>
             </div>
-        <div class="columns small-12 medium-6 dev">
-            <p>devlopment</p>
-            <ul>
-                <li v-for="skills in Development">{{skills}}</li>
-            </ul>
-        </div>
-        <div class="columns small-12 medium-6 des">
+            <div class="columns small-12 medium-5 medium-offset-1 dev">
                 <p>desiging</p>
                 <ul>
-                    <li v-for="skills in Desiging">{{skills}}</li>
+                    <li v-for="skills in Development">{{skills}}</li>
                 </ul>
-        </div>
+            </div>
+            <div class="columns small-12 medium-5  des animate">
+                        <p>desiging</p>
+                        <ul>
+                            <li v-for="skills in Desiging">{{skills}}</li>
+                        </ul>
+            </div>
+        
     </section>
     <!--Work section-->
     <section id="work" class="row">
+        <div class="row">
+            <div class="small-12 text-centered large-12 large-offset-1 columns ">Portfolio</div>
+        </div>
+        <div class="small-12 large-12  columns">
+             <!-- thumbnail image wrapped in a link -->
+             <a href="#img1">
+                <img src="images/car.png" class="thumbnail">
+            </a>
             
-            <div class="row">
-                    <div class="small-2 columns"><img src="images/work.png"></div>
-                    <div class="small-10 text-centered columns">Work</div>
-            </div>
-            <button id="clickme"><div class="row">
+            <!-- lightbox container hidden with CSS -->
+            <a href="#_" class="lightbox" id="img1">
+                <img src="images/car.png">
+            </a>
+            <a href="#img2">
+                <img src="images/infuser.png" class="thumbnail">
+            </a>
+            
+            <!-- lightbox container hidden with CSS -->
+            <a href="#_" class="lightbox" id="img2">
+                <img src="images/infuser.png">
+            </a>
+            <a href="#img3">
+                <img src="images/soccer.png" class="thumbnail">
+            </a>
+            
+            <!-- lightbox container hidden with CSS -->
+            <a href="#_" class="lightbox" id="img3">
+                <img src="images/soccer.png">
+            </a>
+        </div>
+           
+            <!--<button id="clickme"><div class="row">
                     <div class="small-12 large-6 columns" v-for="work in workdata">  
-                    <img :src="'images/'+ work.work_image" alt="">
+                    <img :src="'images/'+ work.work_image" alt="portfolio">
                     </div>
-                    </div></button>
+                    </div></button>-->
 
 	        <!--<div id="lightbox">
 		    <div id="lightbox_content">
@@ -115,20 +153,20 @@
           </video>
         </div>
     </section>
+    <!--Contatc Section-->
+        
     <!--Footer Section-->
-    <footer id="ft">
-        <div class="columns small-5 small-centered medium-2">
-            <a href=""><img src="images/fb.png" class="columns small-4 large-4" alt="facebook"></a>
-            <a href=""><img src="images/insta.png" class="columns small-4 large-4" alt="facebook"></a>
-            <a href="https://github.com/jinkal20"><img src="images/github.png" class="columns small-4 large-4" alt="facebook"></a>
-        </div>
-  
-        <label class="columns text-center">Copyright  © 2018 Jinkal Patel</label>
+    <footer class="row" id="ft">        
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-snapchat"></i>
+        <i class="fab fa-github"></i>
+
       </footer>
 
     </main>
+    
     <script src="js/main.js"></script>
-    <script src="js/lightbox.js"></script>
     <script src="js/animation.js"></script>
 </body>
 </html>

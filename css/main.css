@@ -1,4 +1,394 @@
-@font-face{font-family:myFirstFont;src:url(../font/tw-cen-mt-std/TwCenMTStd-SemiMedium.otf)}@font-face{font-family:title;src:url(../font/copperplate/OPTICopperplate-Heavy.otf)}#hd{background-color:black;height:30px}#logo{float:right}#home{padding-top:50px;width:100%;background-color:#ddd6d0;background-size:cover;padding-bottom: 20px;background-position:center;font-family:myFirstFont;background-repeat:no-repeat;background:linear-gradient(to bottom, #fff 0%, #68899c 100%)}#under{text-decoration:underline;text-decoration-color:white;color:black;font-family:title}#home div{text-align:center;color:black}#letter{text-align:center;color:#ff8400}#vbtn{background-color:#ddd6d0;color:#004a80;padding:12px 20px;border:none;width:100%;border-radius:4px;cursor:pointer;font-family:myFirstFont}#vbtn:hover{background-color:black;color:white}#about{background-color:#004a80;color:white;font-family:myFirstFont}.info{text-align:center}#skills{background:linear-gradient(to bottom, #fff 0%, #68899c 100%);font-family:myFirstFont}.dev{padding-left:40px}.dev p{text-transform:uppercase;color:#ff8400}.des{padding-left:40px}.des p{text-transform:uppercase;color:#f20940}#work{background-color:#004a80;color:white}@media screen and (min-width: 601px){div{font-size:40px}}@media screen and (max-width: 600px){div{font-size:20px}}#btn{background-color:#ddd6d0;color:#004a80;padding:12px 20px;border:none;width:100%;border-radius:4px;cursor:pointer}#btn:hover{background-color:black;color:white}#text{color:white}#text:hover{zoom:1}.field{width:100%;padding:12px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;margin-top:6px;margin-bottom:16px;resize:vertical;transition-property:width}#contact{background:linear-gradient(to bottom, #fff 0%, #68899c 100%)}.container{border-radius:5px;background-color:#004a80;color:white;padding:20px}body{margin:0;padding:0;width:100%;background: linear-gradient(to bottom, #ffffff 0%, #68899c 100%);font-family:myFirstFont}a{text-decoration:none;color:#ffffff;font-family:myFirstFont;transition:color 0.3s ease}#menu a:hover{background-color:#68899c}#menuToggle{display:block;position:relative;top:2px;left:10px;z-index:1;-webkit-user-select:none;user-select:none}#menuToggle input{display:block;width:40px;height:32px;position:absolute;top:-7px;left:-5px;cursor:pointer;opacity:0;z-index:2;-webkit-touch-callout:none}#menuToggle span{display:block;width:33px;height:4px;margin-bottom:5px;position:relative;background:#004a80;border-radius:3px;z-index:1;transform-origin:4px 0px;transition:transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),opacity 0.55s ease}#menuToggle span:first-child{transform-origin:0% 0%}#menuToggle span:nth-last-child(2){transform-origin:0% 100%}#menuToggle input:checked ~ span{opacity:1;transform:rotate(45deg) translate(-2px, -1px);background:#232323}#menuToggle input:checked ~ span:nth-last-child(3){opacity:0;transform:rotate(0deg) scale(0.2, 0.2)}#menuToggle input:checked ~ span:nth-last-child(2){transform:rotate(-45deg) translate(0, -1px)}#menu{position:absolute;width:300px;margin:-100px 0 0 -50px;padding:50px;padding-top:125px;background:black;list-style-type:none;-webkit-font-smoothing:antialiased;transform-origin:0% 0%;transform:translate(-100%, 0);transition:transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)}#menu li{padding:10px 0;font-size:22px}#menuToggle input:checked ~ ul{transform:none}#lightbox{position:fixed;width:100%;height:100%;top:0px;left:0px;background:rgba(0,0,0,0.3);display:none}#lightbox.open{display:block}#lightbox_content{position:fixed;width:500px;height:400px;background:#ffffff;border-radius:3px;left:50%;top:50%;margin-left:-250px;margin-top:-200px;margin-bottom:-200px;text-align:center}#close{position:absolute;right:20px;top:20px;background:rgba(0,0,0,0.2);height:20px;width:20px;border-radius:15px;text-align:center;color:#ffffff;cursor:pointer}#ft{
-    background: linear-gradient(to bottom, #ffffff 0%, #68899c 100%);
+@import '_vars';
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/tw-cen-mt-std/TwCenMTStd-SemiMedium.otf);
 }
-/*# sourceMappingURL=main.css.map */
+@font-face{
+    font-family: title;
+    src: url(../font/copperplate/OPTICopperplate-Heavy.otf);
+}
+#hd{
+    padding-top: 20px;
+    height: 30px;
+    position: fixed;
+}
+
+#logo{
+    float: right;
+}
+
+
+
+/****************************** css for home page *******************************/
+
+#home{
+    padding-top: 150px;
+    max-width: 100%;
+    background-image: url(../images/t.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: myFirstFont;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url(../images/t.jpg);
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#under{
+    text-decoration: underline;
+    text-decoration-color: tomato;
+    color:white;
+    font-family: title;
+}
+
+#home div{
+    text-align: center;
+    color:white;
+    
+}
+
+#letter{
+    text-align: center;
+    color:#ff8400;
+}
+
+#vbtn{
+    background-color: #ddd6d0;
+    color: #004a80;
+    padding: 12px 20px;
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: myFirstFont;
+}
+
+#vbtn:hover{
+    background-color: black;
+    color: white;
+}
+/****************************** css for about page *******************************/
+#about{
+    background-color: #ff533d;
+    color: white;
+    font-family: myFirstFont;
+    max-width: 100%;
+}
+.info{
+    text-align: center;
+}
+
+/****************************** css for skills page *******************************/
+#skills{
+    background-color: #0f1626;
+    font-family: myFirstFont;
+    max-width: 100%;
+    
+}
+#skills div{
+  color:white;
+  
+}
+.dev{
+    padding-left: 40px;   
+}
+.dev p{
+    text-transform: uppercase;
+    color: white;
+}
+.des{
+    padding-left: 40px;   
+}
+.des p{
+    text-transform: uppercase;
+    color:white;
+}
+
+/****************************** css for work page *******************************/
+#work{
+    background-color:#ff533d;
+    color: white;
+    max-width: 100%;
+    
+}
+
+#work img{
+  padding-bottom: 20px;
+  transition: width 2s, height 4s;
+}
+
+
+/* changing font size as per window size*/
+@media screen and (min-width: 601px) {
+    div {
+      font-size: 40px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    div {
+      font-size: 20px;
+    }
+  }
+
+/*// changing video size as per window size
+@media screen and (min-width: 601px) {
+    .vs{
+        width: 990px;
+
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .vs{
+        width: 380px;
+    }
+  }
+
+/****************************** css for contact page *******************************/
+
+#btn{
+    background-color:#0f1626;
+    color:white;
+    padding: 12px 20px;
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn:hover{
+    background-color:#0f1626;
+    color: white; 
+    transition-duration: 2s;
+    opacity: 0.5; 
+    transform: scale(1.0);
+}
+
+#text{
+    color:white;
+}
+
+#text:hover{
+    zoom: 1;
+}
+
+.field{
+    width: 100%;
+    padding: 12px;   
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical ;
+    transition-property: width;
+}
+
+#contact{
+    background-color: #0f1626;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #ff533d;
+    color: white;
+    padding: 20px;
+}
+
+/****************************** css for hamburger menu *******************************/
+
+ body
+ {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   /* make it look decent enough */
+   background: #232323;
+   color: white;
+   font-family: myFirstFont;
+   background: linear-gradient(to bottom, #ffffff 0%, #68899c 100%);
+ }
+ 
+ a
+ {
+   text-decoration: none;
+   color: #ffffff;
+   font-family: myFirstFont;
+   transition: color 0.3s ease;
+ }
+ 
+ 
+ #menuToggle
+{
+  display: block;
+  position: relative;
+  top: 2px;
+  left: 10px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /** Just a quick hamburger **/
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background:white;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 125px;
+   color: white;
+   background:#ff533d;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 30px;
+   color: white;
+ }
+
+ #menu li:hover{
+   color:#0f1626;
+ }
+
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+ /****************************** css for light box *******************************/
+
+.thumbnail {
+  max-width: 40%;
+}
+
+.thumbnail:hover{
+  transition-duration: 2s;
+  opacity: 0.5; 
+  transform: scale(1.0);
+}
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
+}
+/****************************** css for footer page *******************************/
+#ft{
+    background-color: #ff533d;
+    font-size: 50px;
+}
