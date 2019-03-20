@@ -8,7 +8,7 @@
             singlemoviedata: [],
             showDetails : false,
             workdata:[],
-            Name: ["Hello I'm","JINKAL PATEL"],
+            Name: ["JINKAL PATEL","Front-End and Graphic Designer"],
             quote: ["“Whitespace is like air: it is necessary for design to breathe.”"],
             Development: ["HTML","CSS","Javascript","PHP","MySQL","Vue","NodeJS"],
             Desiging : ["Photopshop","Illustrator","InDesign","AfterEffects","Cinema4D"]

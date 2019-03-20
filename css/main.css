@@ -87,9 +87,18 @@
     color: white;
     font-family: myFirstFont;
     max-width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    
 }
 .info{
     text-align: center;
+}
+
+#about h1{
+  padding-bottom: 50px;
+  font-family: myFirstFont;
 }
 
 /****************************** css for skills page *******************************/
@@ -97,7 +106,8 @@
     background-color: #0f1626;
     font-family: myFirstFont;
     max-width: 100%;
-    
+    padding-bottom: 100px;
+    padding-top: 100px;
 }
 #skills div{
   color:white;
@@ -118,6 +128,11 @@
     color:white;
 }
 
+#skills h1{
+  padding-bottom: 50px;
+  font-family: myFirstFont;
+}
+
 /****************************** css for work page *******************************/
 #work{
     background-color:#ff533d;
@@ -131,6 +146,10 @@
   transition: width 2s, height 4s;
 }
 
+#work h1{
+  padding-bottom: 50px;
+  font-family: myFirstFont;
+}
 
 /* changing font size as per window size*/
 @media screen and (min-width: 601px) {
@@ -390,5 +409,8 @@
 /****************************** css for footer page *******************************/
 #ft{
     background-color: #ff533d;
-    font-size: 50px;
+    padding-top: 100px;
+    font-size: 100px;
+    height: 200px;
+    max-width: 100%;
 }
