@@ -48,6 +48,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media screen and (max-width: 600px) {
+  #under{
+      font-size: 30px;
+  };
+  #home{
+    height: auto;
+  }
+}
 #under{
     text-decoration: underline;
     text-decoration-color: tomato;
@@ -420,4 +429,8 @@
     font-size: 100px;
     max-width: 100%;
     font-family: myFirstFont;
+}
+
+#ft a{
+  color: black;
 }
