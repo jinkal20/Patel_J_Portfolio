@@ -7,7 +7,7 @@
 }
 @font-face{
     font-family: title;
-    src: url(../font/copperplate/OPTICopperplate-Heavy.otf);
+    src: url(../font/copperplate/OPTICopperplate-Light.otf);
 }
 #hd{
     padding-top: 20px;
@@ -40,7 +40,7 @@
   background-image: url(../images/t.jpg);
 
   /* Set a specific height */
-  min-height: 500px; 
+  min-height: 100%; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -83,31 +83,28 @@
 }
 /****************************** css for about page *******************************/
 #about{
-    background-color: #ff533d;
-    color: white;
-    font-family: myFirstFont;
-    max-width: 100%;
-    padding-top: 50px;
+    
     padding-bottom: 50px;
-    
-    
+    background-color:#f0ece9;
+    color: black;
+    font-family: myFirstFont;
+    max-width: 100%;    
 }
+
 .info{
     text-align: center;
 }
 
 #about h1{
-  padding-bottom: 50px;
+
   font-family: myFirstFont;
 }
 
 /****************************** css for skills page *******************************/
 #skills{
-    background-color: #0f1626;
+    background-color: #72707c;
     font-family: myFirstFont;
     max-width: 100%;
-    padding-bottom: 100px;
-    padding-top: 100px;
 }
 #skills div{
   color:white;
@@ -129,15 +126,15 @@
 }
 
 #skills h1{
-  padding-bottom: 50px;
   font-family: myFirstFont;
 }
 
 /****************************** css for work page *******************************/
 #work{
-    background-color:#ff533d;
-    color: white;
+    background-color:#f0ece9;
+    color: black;
     max-width: 100%;
+    padding-top: 30px;
     
 }
 
@@ -188,6 +185,7 @@
     width: 100%;
     border-radius: 4px;
     cursor: pointer;
+    font-family: myFirstFont;
 }
 
 #btn:hover{
@@ -199,7 +197,9 @@
 }
 
 #text{
-    color:white;
+    color:black;
+    font-family: myFirstFont;
+    font-size: 24px;
 }
 
 #text:hover{
@@ -224,9 +224,16 @@
 
 .container {
     border-radius: 5px;
-    background-color: #ff533d;
-    color: white;
+    background-color: #f0ece9;
+    color: black;
     padding: 20px;
+    font-family: myFirstFont;
+}
+
+.container a{
+    text-align: right;
+    color: white;
+    font-family: myFirstFont;
 }
 
 /****************************** css for hamburger menu *******************************/
@@ -337,7 +344,7 @@
    padding: 50px;
    padding-top: 125px;
    color: white;
-   background:#ff533d;
+   background:black;
    list-style-type: none;
    -webkit-font-smoothing: antialiased;
    /* to stop flickering of text in safari */
@@ -356,7 +363,7 @@
  }
 
  #menu li:hover{
-   color:#0f1626;
+   color: tomato;
  }
 
  #menuToggle input:checked ~ ul
@@ -389,7 +396,7 @@
 	text-align: center;
 	top: 0;
 	left: 0;
-	background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.8); 
 }
 
 .lightbox img {
@@ -406,11 +413,13 @@
 	/** Unhide lightbox **/
 	display: block;
 }
+
 /****************************** css for footer page *******************************/
 #ft{
-    background-color: #ff533d;
-    padding-top: 100px;
+    background-color: #f0ece9;
+    padding-top: 70px;
+    padding-bottom: 70px;
     font-size: 100px;
-    height: 200px;
     max-width: 100%;
+    font-family: myFirstFont;
 }

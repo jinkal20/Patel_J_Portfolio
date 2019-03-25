@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <title>Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Patel Jinkal</title>
 </head>
 <body>
 
@@ -34,7 +37,7 @@
                             <a href="#about"><li>About</li></a>
                             <a href="#skills"><li>Interest</li></a>
                             <a href="#work"><li>Work</li></a>
-                            <a href="contact.php"><li>Contact</li></a>
+                            <a href="contact.php" target="_blank"><li>Contact</li></a>
                           </ul>
                         </div>
                       </nav>
@@ -45,7 +48,7 @@
             <div id="under" class="small-12 large-12 columns" v-for="home in Name">{{ home }}</div>
             <!--<p v-for="tag in quote">{{ tag }}</p>-->
             <div id="letter"></div>
-            <a href="#v" id="vbtn">Reel</a>
+            <a href="images/Jinkal_Resume.pdf" target="_blank" id="vbtn">Resume</a>
         </div>
 
     </section>  
@@ -54,22 +57,22 @@
     <section id="about" class="row">
         
         <div class="row">
-        <h1 class="small-12 large-12  columns text-center ">About</h1>
+            <h1 class="small-12 large-12  columns text-center">About</h1>
         </div>
-        <div class="row">
-        <div class="small-3 small-centered large-2 large-centered large-offset-6 columns homebg" v-for="about in videodata"><img :src="'images/'+ about.image" alt=""></div>
-        <div class="small-12 columns info" v-for="about in videodata">{{ about.description }}</div>
+        <div class="row aboutdown">
+            <div class="small-3 small-centered large-2 large-centered large-offset-6 columns homebg" v-for="about in videodata"><img :src="'images/'+ about.image" alt=""></div>
+            <div class="small-12 columns info" v-for="about in videodata">{{ about.description }}</div>
         </div>
         
     </section>
     <!--Skills Section--> 
     
     <section id="skills" class="row">
-        <div class="row">
+        <div class="row skilldown">
             <h1 class="small-12 large-12  columns text-center ">Interest</h1>
             </div>
             <div class="columns small-12 medium-5 medium-offset-1 dev">
-                <p>desiging</p>
+                <p>Developing</p>
                 <ul>
                     <li v-for="skills in Development">{{skills}}</li>
                 </ul>
@@ -85,9 +88,10 @@
     <!--Work section-->
     <section id="work" class="row">
         <div class="row">
-            <h1 class="small-12 large-12  columns text-center ">Portfolio</h1>
+            <h1 class="small-12 large-12 columns text-center ">Portfolio</h1>
         </div>
-        <div class="small-12 large-12  columns">
+        <div class="row">
+        <div class="small-12 large-12 large-offset-2 columns">
              <!-- thumbnail image wrapped in a link -->
              <a href="#img1">
                 <img src="images/car.png" class="thumbnail">
@@ -96,6 +100,11 @@
             <!-- lightbox container hidden with CSS -->
             <a href="#_" class="lightbox" id="img1">
                 <img src="images/car.png">
+                <div>
+                    <div class="large-6 columns">Objective: We are supposed to built a car promo app in which we have have to build some graphics animation for car.</div>
+                    <div class="large-6 columns">Result: We built backend stuff for car and bring that that data from database. My Role is Back-End Developer.</div>
+                    
+                </div>
             </a>
             <a href="#img2">
                 <img src="images/infuser.png" class="thumbnail">
@@ -104,6 +113,10 @@
             <!-- lightbox container hidden with CSS -->
             <a href="#_" class="lightbox" id="img2">
                 <img src="images/infuser.png">
+                <div>
+                    <div class="large-6 columns">Objective: In this project we are supposed to built Infuser bottle brand and we need to create advertisement for our brand.</div>
+                    <div class="large-6 columns">Result: We had done drand design for infuser bottle "Splash". </div>
+                </div>
             </a>
             <a href="#img3">
                 <img src="images/soccer.png" class="thumbnail">
@@ -112,9 +125,98 @@
             <!-- lightbox container hidden with CSS -->
             <a href="#_" class="lightbox" id="img3">
                 <img src="images/soccer.png">
+                <div>
+                    <div class="large-6 columns">Objective:</div>
+                    <div class="large-6 columns">Result:</div>
+                </div>
+            </a>
+            <a href="#img4" target="">
+                <img src="images/fanshawe.png" class="thumbnail">
+            </a>
+            
+            <!-- lightbox container hidden with CSS -->
+            <a href="#_" class="lightbox" id="img4">
+                <img src="images/fanshawe.png">
+                <div>
+                    <div class="large-6 columns">Objective: I need to create a page through NodeJS for any topic.</div>
+                    <div class="large-6 columns">Result: </div>
+                </div>
+            </a>
+            <a href="#img3">
+                <img src="images/infographic.png" class="thumbnail">
+            </a>
+            
+            <!-- lightbox container hidden with CSS -->
+            <a href="#_" class="lightbox" id="img3">
+                <img src="images/infographic.png">
+                <div>
+                    <div class="large-6 columns">Objective:</div>
+                    <div class="large-6 columns">Result:</div>
+                </div>
+            </a>
+            <a href="#img3">
+                <img src="images/purevolume.png" class="thumbnail">
+            </a>
+            
+            <!-- lightbox container hidden with CSS -->
+            <a href="#_" class="lightbox" id="img3">
+                <img src="images/purevolume.png">
+                <div>
+                    <div class="large-6 columns">Objective:</div>
+                    <div class="large-6 columns">Result:</div>
+                </div>
+            </a>
+            <a href="#img3">
+                <img src="images/ontariosummer.png" class="thumbnail">
+            </a>
+            
+            <!-- lightbox container hidden with CSS -->
+            <a href="#_" class="lightbox" id="img3">
+                <img src="images/ontariosummer.png">
+                <div>
+                    <div class="large-6 columns">Objective:</div>
+                    <div class="large-6 columns">Result:</div>
+                </div>
+            </a>
+            <a href="#img3">
+                <img src="images/oragndonation.png" class="thumbnail">
+            </a>
+            
+            <!-- lightbox container hidden with CSS -->
+            <a href="#_" class="lightbox" id="img3">
+                <img src="images/oragndonation.png">
+                <div>
+                    <div class="large-6 columns">Objective:</div>
+                    <div class="large-6 columns">Result:</div>
+                </div>
+            </a>
+            <a href="#img3">
+                <img src="images/agency.png" class="thumbnail">
+            </a>
+            
+            <!-- lightbox container hidden with CSS -->
+            <a href="#_" class="lightbox" id="img3">
+                <img src="images/agency.png">
+                <div>
+                    <div class="large-6 columns">Objective:</div>
+                    <div class="large-6 columns">Result:</div>
+                </div>
+            </a>
+            <a href="#img3">
+                <img src="images/roku.PNG" class="thumbnail">
+            </a>
+            
+            <!-- lightbox container hidden with CSS -->
+            <a href="#_" class="lightbox" id="img3">
+                <img src="images/roku.PNG">
+                <div>
+                    <div class="large-6 columns">Objective:</div>
+                    <div class="large-6 columns">Result:</div>
+                </div>
             </a>
         </div>
-           
+        </div>
+        
             <!--<button id="clickme"><div class="row">
                     <div class="small-12 large-6 columns" v-for="work in workdata">  
                     <img :src="'images/'+ work.work_image" alt="portfolio">
@@ -148,12 +250,11 @@
     <!--Contatc Section-->
         
     <!--Footer Section-->
-    <footer class="row" id="ft">       
-        <div class="text-center"> 
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-snapchat"></i>
-            <i class="fab fa-github"></i>
+    <footer class="row" id="ft">
+        <div class="large-12 small-12 columns text-center">Patel Jinkal 2018</div>
+        <div class="large-12 small-12 columns text-center"> 
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
         </div>
 
       </footer>

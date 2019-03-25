@@ -23,10 +23,10 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/foundation.css">
 	<title>Contact Us</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/foundation.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
@@ -46,8 +46,8 @@
 	<?php endif;?>	
 	<div class="container">
 	<div class="row">
-        
-        <div class="small- text-centered large-2 columns ">Contact</div>
+		<div class="small-2 text-centered large-2 columns ">Contact</div>
+		<a href="index.html" id="homebtn">Home</a>
         </div>
 	<form action="sendemail.php" method="POST">
 		<?php  foreach ($fields as $field_name => $field_config):?>
