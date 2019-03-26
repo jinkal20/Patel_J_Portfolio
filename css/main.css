@@ -110,6 +110,11 @@
 }
 
 /****************************** css for skills page *******************************/
+.it div img{
+  height: 100px;
+  width: 150px;
+}
+
 #skills{
     background-color: #72707c;
     font-family: myFirstFont;
@@ -185,7 +190,12 @@
   }
 
 /****************************** css for contact page *******************************/
+.mc a {
+  text-align: center;
+  color: black;
+  font-size: 24px;
 
+}
 #btn{
     background-color:#0f1626;
     color:white;
